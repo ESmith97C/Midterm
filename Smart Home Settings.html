@@ -1,0 +1,139 @@
+<html>
+<head>
+<meta name = "viewport" content="width=device-width, initial-scale=1">
+<style>
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: sans-serif;
+    margin: 0 auto;
+}
+.dropbtn {
+  background-color: #fa9f38;
+  color: white;
+  padding: 16px;
+  font-size: 26px;
+  border: none;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #ddd;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color: #db8625;}
+</style>
+</head>
+<body>
+
+    <script type="text/javascript">
+        function ShowHideLivLamp() {
+            var livlamp = document.getElementById("livLamp")
+            var dvLivLampTimes = document.getElementById("dvLivLampTimes");
+            dvLivLampTimes.style.display = livlamp.onclick ? "block" : "show";
+        }
+    </script>
+
+
+
+
+
+    <div class="dropdown">
+        <button class="dropbtn">Select Device</button>
+        <div class="dropdown-content">
+            <button id="livlamp" onclick ="ShowHideLivLamp">Living Room Lamp</a>
+            <button id="bedlamp1" onclick ="">Bedroom #1 Desk Lamp</a>
+            <button id="bedlamp2" onclick ="">Bedroom #2 Desk Lamp</a>
+            <button id="bathfan" onclick ="">Bathroom Fan</a>
+            <button id="washer" onclick ="">Washer</a>
+            <button id="dryer" onclick ="">Dryer</a>
+            <button id="fdoor" onclick ="">Front Door</a>
+            <button id="bdoor" onclick ="">Back Door</a>
+            <button id="gdoor" onclick ="">Garage Door</a>
+            <button id="kitfan" onclick ="">Kitchen Fan</a>
+            <button id="dinlight" onclick ="">Dining Room Light</a>
+
+    </div>
+</div>
+
+
+
+
+<div id="dvLivLampTimes" style="display:none">
+    <p><h3>Living Room Lamp</h3></p>
+    <label for="livLampTimeOn">Turn on at:</label>
+    <input type="time" id="livLampTimeOn">
+
+    <label for="livLampTimeOff">Turn off at:</label>    
+    <input type="time" id="livLampTimeOff">
+
+</div>
+
+
+<div id="dvbedLampTimes" style="display:none">       
+
+    <label for="bedLampTimeOn">Turn on at:</label>
+    <input type="time" id="bedLampTimeOn">
+
+    <label for="bedLampTimeOff">Turn off at:</label>    
+    <input type="time" id="bedLampTimeOff">
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+
+
+
+
+
+
+
+
+</html>
