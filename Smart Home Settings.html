@@ -167,6 +167,13 @@ body{
             }
         }
 
+        if (typeof(Storage) !== "undefined") {
+        localStorage.setItem("livLampTimeOn", 12);
+        } else {
+        document.getElementById("livLampTimeOn").innerHTML = "Sorry, your browser does not support Web Storage...";
+        }
+
+        //document.getElementById("livLampTimeOn")
     </script>
 
 
@@ -192,7 +199,7 @@ body{
 
 
 
-<br></br><br></br><br></br><br></br><br></br>
+<br></br><br></br><br></br><br></br><br></br><br></br>
 
 <div id="dvLivLampTimes" style="display:none">   
     <p><h3>Living Room Lamp</h3></p>
