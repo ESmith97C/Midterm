@@ -2,11 +2,19 @@
 <html>
 <head>
 <meta name = "viewport" content="width=device-width, initial-scale=1">
+<style>
 
-
-
-
-
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    
+    body{
+        font-family: sans-serif;
+        margin: 0 auto;
+    }    
+    
+</style>
 </head>
 <body>
 
@@ -43,24 +51,28 @@ document.getElementById('timeDisplay').innerHTML = finalTime;
 setInterval(updateTime,1000);
 
 
-if (dvLivLampTimes.style.display = "none"){
 
-    document.getElementById('bigDisplay').innerHTML = finalTime;
-}
+</script>
 
+<script>
+
+    document.getElementById("bigDisplay").innerHTML = localStorage.getItem("livLampTimeOn");
 
 
 
 </script>
 
-
-
 <button id="btnRun" onclick = "updateTime()">Run</button>
-
+<br></br>
+<label for="timeDisplay" >Current Time:</label>
 <p id="timeDisplay">dis is da time</p>
 
 <p id="bigDisplay">dis is da big display</p>
 
+<script>
+
+
+</script>
 
 
 
