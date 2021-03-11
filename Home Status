@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name = "viewport" content="width=device-width, initial-scale=1">
+
+
+
+
+
+</head>
+<body>
+
+<script>
+
+
+//function updateTime(){
+    //var d = new Date();
+    //var currentTime = d.getTime;
+    //document.getElementById('disTime').innerHTML = currentTime;
+    //}
+    //setInterval(updateTime,1000);
+
+function updateTime(){
+var today = new Date();
+
+var hours = today.getHours();
+
+hours = ((hours + 11) % 12 + 1);
+
+var minutes = today.getMinutes();
+
+var seconds = today.getSeconds();
+
+var AmOrPM;
+
+if (today.getHours() >= 12){AmOrPM = "PM";}
+else{AmOrPM = "AM";}
+
+var finalTime = hours + ":" + minutes + ":" + seconds + " " + AmOrPM;
+
+document.getElementById('timeDisplay').innerHTML = finalTime;
+}
+setInterval(updateTime,1000);
+
+
+if (dvLivLampTimes.style.display = "none"){
+
+    document.getElementById('bigDisplay').innerHTML = finalTime;
+}
+
+
+
+
+</script>
+
+
+
+<button id="btnRun" onclick = "updateTime()">Run</button>
+
+<p id="timeDisplay">dis is da time</p>
+
+<p id="bigDisplay">dis is da big display</p>
+
+
+
+
+
+
+
+
+</body>
+</html>
