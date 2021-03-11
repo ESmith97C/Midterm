@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
 <head>
 <meta name = "viewport" content="width=device-width, initial-scale=1">
@@ -32,6 +33,7 @@ body{
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
+  padding: 10px;
   
 }
 
@@ -47,16 +49,124 @@ body{
 .dropdown:hover .dropdown-content {display: block;}
 
 .dropdown:hover .dropbtn {background-color: #db8625;}
+
+
 </style>
 </head>
 <body>
 
+  
     <script type="text/javascript">
-        function ShowHideLivLamp() {
-            var livlamp = document.getElementById("livLamp")
+        function ShowHideLivLamp() {    
+            var btnLivLamp = document.getElementById("btnLivLamp")
             var dvLivLampTimes = document.getElementById("dvLivLampTimes");
-            dvLivLampTimes.style.display = livlamp.onclick ? "block" : "show";
+            if (dvLivLampTimes.style.display == "none"){
+              dvLivLampTimes.style.display = "block";
+            } else{
+              dvLivLampTimes.style.display = "none";
+            }
         }
+
+        function ShowHideBed1Lamp() {    
+            var btnBedLamp1 = document.getElementById("btnBedLamp1")
+            var dvBedLamp1Times = document.getElementById("dvBedLamp1Times");
+            if (dvBedLamp1Times.style.display == "none"){
+              dvBedLamp1Times.style.display = "block";
+            } else{
+              dvBedLamp1Times.style.display = "none";
+            }
+        }
+
+        function ShowHideBed2Lamp() {    
+            var btnBedLamp2 = document.getElementById("btnBedLamp2")
+            var dvBedLamp2Times = document.getElementById("dvBedLamp2Times");
+            if (dvBedLamp2Times.style.display == "none"){
+              dvBedLamp2Times.style.display = "block";
+            } else{
+              dvBedLamp2Times.style.display = "none";
+            }
+        }
+
+        function ShowHideBathFan() {    
+            var btnBathFan = document.getElementById("btnBathFan")
+            var dvBathFanTimes = document.getElementById("dvBathFanTimes");
+            if (dvBathFanTimes.style.display == "none"){
+              dvBathFanTimes.style.display = "block";
+            } else{
+              dvBathFanTimes.style.display = "none";
+            }
+        }
+
+        function ShowHideWasher() {    
+            var btnWasher = document.getElementById("btnWasher")
+            var dvWasherTimes = document.getElementById("dvWasherTimes");
+            if (dvWasherTimes.style.display == "none"){
+              dvWasherTimes.style.display = "block";
+            } else{
+              dvWasherTimes.style.display = "none";
+            }
+        }
+
+        function ShowHideDryer() {    
+            var btnDryer = document.getElementById("btnDryer")
+            var dvDryerTimes = document.getElementById("dvDryerTimes");
+            if (dvDryerTimes.style.display == "none"){
+              dvDryerTimes.style.display = "block";
+            } else{
+              dvDryerTimes.style.display = "none";
+            }
+        }
+
+        function ShowHideFDoor() {    
+            var btnFDoor = document.getElementById("btnFDoor")
+            var dvFDoorTimes = document.getElementById("dvFDoorTimes");
+            if (dvFDoorTimes.style.display == "none"){
+              dvFDoorTimes.style.display = "block";
+            } else{
+              dvFDoorTimes.style.display = "none";
+            }
+        }
+
+        function ShowHideBDoor() {    
+            var btnBDoor = document.getElementById("btnBDoor")
+            var dvBDoorTimes = document.getElementById("dvBDoorTimes");
+            if (dvBDoorTimes.style.display == "none"){
+              dvBDoorTimes.style.display = "block";
+            } else{
+              dvBDoorTimes.style.display = "none";
+            }
+        }
+
+        function ShowHideGDoor() {    
+            var btnGDoor = document.getElementById("btnGDoor")
+            var dvGDoorTimes = document.getElementById("dvGDoorTimes");
+            if (dvGDoorTimes.style.display == "none"){
+              dvGDoorTimes.style.display = "block";
+            } else{
+              dvGDoorTimes.style.display = "none";
+            }
+        }
+
+        function ShowHideKitFan() {    
+            var btnKitFan = document.getElementById("btnKitFan")
+            var dvKitFanTimes = document.getElementById("dvKitFanTimes");
+            if (dvKitFanTimes.style.display == "none"){
+              dvKitFanTimes.style.display = "block";
+            } else{
+              dvKitFanTimes.style.display = "none";
+            }
+        }
+
+        function ShowHideDinLight() {    
+            var btnDinLight = document.getElementById("btnDinLight")
+            var dvDinLightTimes = document.getElementById("dvDinLightTimes");
+            if (dvDinLightTimes.style.display == "none"){
+              dvDinLightTimes.style.display = "block";
+            } else{
+              dvDinLightTimes.style.display = "none";
+            }
+        }
+
     </script>
 
 
@@ -66,25 +176,25 @@ body{
     <div class="dropdown">
         <button class="dropbtn">Select Device</button>
         <div class="dropdown-content">
-            <button id="livlamp" onclick ="ShowHideLivLamp">Living Room Lamp</a>
-            <button id="bedlamp1" onclick ="">Bedroom #1 Desk Lamp</a>
-            <button id="bedlamp2" onclick ="">Bedroom #2 Desk Lamp</a>
-            <button id="bathfan" onclick ="">Bathroom Fan</a>
-            <button id="washer" onclick ="">Washer</a>
-            <button id="dryer" onclick ="">Dryer</a>
-            <button id="fdoor" onclick ="">Front Door</a>
-            <button id="bdoor" onclick ="">Back Door</a>
-            <button id="gdoor" onclick ="">Garage Door</a>
-            <button id="kitfan" onclick ="">Kitchen Fan</a>
-            <button id="dinlight" onclick ="">Dining Room Light</a>
-
+            <button id="btnLivLamp" onclick = "ShowHideLivLamp()">Living Room Lamp</button> 
+            <button id="btnBedLamp1" onclick = "ShowHideBed1Lamp()">Bedroom #1 Desk Lamp</button> 
+            <button id="btnBedLamp2" onclick = "ShowHideBed2Lamp()">Bedroom #2 Desk Lamp</button> 
+            <button id="btnBathFan" onclick = "ShowHideBathFan()">Bathroom Fan</button> 
+            <button id="btnWasher" onclick = "ShowHideWasher()">Washer</button> 
+            <button id="btnDryer" onclick = "ShowHideDryer()">Dryer</button> 
+            <button id="btnFDoor" onclick = "ShowHideFDoor()">Front Door</button> 
+            <button id="btnBDoor" onclick = "ShowHideBDoor()">Back Door</button> 
+            <button id="btnGDoor" onclick = "ShowHideGDoor()">Garage Door</button> 
+            <button id="btnKitFan" onclick = "ShowHideKitFan()">Kitchen Fan</button> 
+            <button id="btnDinLight" onclick = "ShowHideDinLight()">Dining Room Light</button> 
     </div>
 </div>
 
 
 
+<br></br><br></br><br></br><br></br><br></br>
 
-<div id="dvLivLampTimes" style="display:none">
+<div id="dvLivLampTimes" style="display:none">   
     <p><h3>Living Room Lamp</h3></p>
     <label for="livLampTimeOn">Turn on at:</label>
     <input type="time" id="livLampTimeOn">
@@ -92,48 +202,109 @@ body{
     <label for="livLampTimeOff">Turn off at:</label>    
     <input type="time" id="livLampTimeOff">
 
-</div>
+</div><br></br>
 
+<div id="dvBedLamp1Times" style="display:none">       
+    <p><h3>Bedroom #1 Desk Lamp</h3></p>
+    <label for="bedLamp1TimeOn">Turn on at:</label>
+    <input type="time" id="bedLamp1TimeOn">
 
-<div id="dvbedLampTimes" style="display:none">       
+    <label for="bedLamp1TimeOff">Turn off at:</label>    
+    <input type="time" id="bedLamp1TimeOff">
 
-    <label for="bedLampTimeOn">Turn on at:</label>
-    <input type="time" id="bedLampTimeOn">
+</div><br></br>
 
-    <label for="bedLampTimeOff">Turn off at:</label>    
-    <input type="time" id="bedLampTimeOff">
+<div id="dvBedLamp2Times" style="display:none">       
+  <p><h3>Bedroom #2 Floor Lamp</h3></p>
+  <label for="bedLamp2TimeOn">Turn on at:</label>
+  <input type="time" id="bedLamp2TimeOn">
 
-</div>
+  <label for="bedLamp2TimeOff">Turn off at:</label>    
+  <input type="time" id="bedLamp2TimeOff">
 
+</div><br></br>
 
+<div id="dvBathFanTimes" style="display:none">       
+  <p><h3>Bathroom Fan</h3></p>
+  <label for="bathFanTimeOn">Turn on at:</label>
+  <input type="time" id="bathFanTimeOn">
 
+  <label for="bathFanTimeOff">Turn off at:</label>    
+  <input type="time" id="bathFanTimeOff">
 
+</div><br></br>
 
+<div id="dvWasherTimes" style="display:none">   
+  <p><h3>Washer</h3></p>
+  <label for="washerOn">Turn on at:</label>
+  <input type="time" id="washerOn">
 
+  <label for="washerOff">Turn off at:</label>    
+  <input type="time" id="washerOff">
 
+</div><br></br>
 
+<div id="dvDryerTimes" style="display:none">   
+  <p><h3>Dryer</h3></p>
+  <label for="dryerOn">Turn on at:</label>
+  <input type="time" id="dryerOn">
 
+  <label for="dryerOff">Turn off at:</label>    
+  <input type="time" id="dryerOff">
 
+</div><br></br>
 
+<div id="dvFDoorTimes" style="display:none">   
+  <p><h3>Front Door</h3></p>
+  <label for="fDoorOn">Turn on at:</label>
+  <input type="time" id="fDoorOn">
 
+  <label for="fDoorOff">Turn off at:</label>    
+  <input type="time" id="fDoorOff">
 
+</div><br></br>
 
+<div id="dvBDoorTimes" style="display:none">   
+  <p><h3>Back Door</h3></p>
+  <label for="bDoorOn">Turn on at:</label>
+  <input type="time" id="bDoorOn">
 
+  <label for="bDoorOff">Turn off at:</label>    
+  <input type="time" id="bDoorOff">
 
+</div><br></br>
 
+<div id="dvGDoorTimes" style="display:none">   
+  <p><h3>Garage Door</h3></p>
+  <label for="gDoorOn">Turn on at:</label>
+  <input type="time" id="gDoorOn">
 
+  <label for="gDoorOff">Turn off at:</label>    
+  <input type="time" id="gDoorOff">
 
+</div><br></br>
+
+<div id="dvKitFanTimes" style="display:none">   
+  <p><h3>Kitchen Fan</h3></p>
+  <label for="kitFanOn">Turn on at:</label>
+  <input type="time" id="kitFanOn">
+
+  <label for="kitFanOff">Turn off at:</label>    
+  <input type="time" id="kitFanOff">
+
+</div><br></br>
+
+<div id="dvDinLightTimes" style="display:none">   
+  <p><h3>Dining Lights</h3></p>
+  <label for="dinLightOn">Turn on at:</label>
+  <input type="time" id="dinLightOn">
+
+  <label for="dinLightOff">Turn off at:</label>    
+  <input type="time" id="dinLightOff">
+
+</div><br></br>
 
 
 
 </body>
-
-
-
-
-
-
-
-
-
 </html>
