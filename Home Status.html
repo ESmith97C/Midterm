@@ -12,72 +12,201 @@
     body{
         font-family: sans-serif;
         margin: 0 auto;
-    }    
+    }
+    
+    .button{
+        background-color: #fa9f38;
+        color: white;
+        padding: 16px;
+        font-size: 26px;
+        border: none;
+    }   
     
 </style>
 </head>
 <body>
 
-<script>
-
-
-//function updateTime(){
-    //var d = new Date();
-    //var currentTime = d.getTime;
-    //document.getElementById('disTime').innerHTML = currentTime;
-    //}
-    //setInterval(updateTime,1000);
+<script>  //JS to set time
 
 function updateTime(){
-var today = new Date();
-
-var hours = today.getHours();
-
-hours = ((hours + 11) % 12 + 1);
-
-var minutes = today.getMinutes();
-
-var seconds = today.getSeconds();
-
-var AmOrPM;
-
-if (today.getHours() >= 12){AmOrPM = "PM";}
-else{AmOrPM = "AM";}
-
-var finalTime = hours + ":" + minutes + ":" + seconds + " " + AmOrPM;
-
-document.getElementById('timeDisplay').innerHTML = finalTime;
-}
-setInterval(updateTime,1000);
-
-
+    var d = new Date();
+    var currentTime = d.getTime();
+    document.getElementById('timeDisplay').innerHTML = currentTime;
+    }
+    setInterval(updateTime,1000);
 
 </script>
 
-<script>
 
-    document.getElementById("bigDisplay").innerHTML = localStorage.getItem("livLampTimeOn");
+<script> //JS to compare submitted times to current time
 
+    //Getters for the user set times from localstorage
+    localStorage.getItem("livLampTimeOn");
+    localStorage.getItem("livLampTimeOff");
 
+    localStorage.getItem("bedLamp1TimeOn");
+    localStorage.getItem("bedLamp1TimeOff");
+
+    localStorage.getItem("bedLamp2TimeOn");
+    localStorage.getItem("bedLamp2TimeOff");
+
+    localStorage.getItem("bathFanTimeOn");
+    localStorage.getItem("bathFanTimeOff");
+
+    localStorage.getItem("washerOn");
+    localStorage.getItem("washerOff");
+
+    localStorage.getItem("dryerOn");
+    localStorage.getItem("dryerOff");
+
+    localStorage.getItem("fDoorOn");
+    localStorage.getItem("fDoorOff");
+
+    localStorage.getItem("bDoorOn");
+    localStorage.getItem("bDoorOff");
+
+    localStorage.getItem("gDoorOn");
+    localStorage.getItem("gDoorOff");
+    
+    localStorage.getItem("kitFanOn");
+    localStorage.getItem("kitFanOff");
+
+    localStorage.getItem("dinLightOn");
+    localStorage.getItem("dinLightOff");
+
+    //Functions to compare the current time to the times set by the user, and set the image accordingly
+    function compareLivLampTimes(){
+        if (livLampTimeOn < timeDisplay && timeDisplay < livLampTimeOff){
+            document.getElementById("livLampTimeImage").innerHTML = Image.src = "images/light_on.png";
+        } else{
+            document.getElementById("livLampTimeImage").innerHTML = Image.src = "images/light_off.png";
+        }
+    }
+
+    function compareBedLamp1Times(){
+        if (bedLamp1TimeOn < timeDisplay && timeDisplay < bedLamp1TimeOff){
+            document.getElementById("bedLamp1Image").innerHTML = Image.src = "images/light_on.png";
+        } else{
+            document.getElementById("bedLamp1Image").innerHTML = Image.src = "images/light_off.png";
+        }
+    }
+
+    function compareBedLamp2Times(){
+        if (bedLamp2TimeOn > timeDisplay && timeDisplay < bedLamp2TimeOff){
+            document.getElementById("bedLamp2Image").innerHTML = Image.src = "images/light_on.png";
+        } else{
+            document.getElementById("bedLamp2Image").innerHTML = Image.src = "images/light_off.png";
+        }
+    }
+
+    function compareBathroomFanTimes(){
+        if (bathFanTimeOn < timeDisplay && timeDisplay < bathFanTimeOff){
+            document.getElementById("bathroomFanImage").innerHTML = Image.src = "images/fan_on.png";
+        } else{
+            document.getElementById("bathroomFanImage").innerHTML = Image.src = "images/fan_off.png";
+        }
+    }
+
+    function compareWasherTimes(){
+        if (washerOn < timeDisplay && timeDisplay < washerOff){
+            document.getElementById("washerImage").innerHTML = Image.src = "images/washer_on.png";
+        } else{
+            document.getElementById("washerImage").innerHTML = Image.src = "images/washer_off.png";
+        }
+    }
+
+    function compareDryerTimes(){
+        if (dryerOn < timeDisplay && timeDisplay < dryerOff){
+            document.getElementById("dryerImage").innerHTML = Image.src = "images/dryer_on.png";
+        } else{
+            document.getElementById("dryerImage").innerHTML = Image.src = "images/dyer_off.png";
+        }
+    }
+
+    function compareFrontDoorTimes(){
+        if (fDoorOn < timeDisplay && timeDisplay < fDoorOff){
+            document.getElementById("fDoorImage").innerHTML = Image.src = "images/lock_on.png";
+        } else{
+            document.getElementById("fDoorImage").innerHTML = Image.src = "images/lock_off.png";
+        }
+    }
+
+    function compareBackDoorTimes(){
+        if (bDoorOn < timeDisplay && timeDisplay < bDoorOff){
+            document.getElementById("bDoorImage").innerHTML = Image.src = "images/lock_on.png";
+        } else{
+            document.getElementById("bDoorImage").innerHTML = Image.src = "images/lock_off.png";
+        }
+    }
+
+    function compareGarageDoorTimes(){
+        if (gDoorOn < timeDisplay && timeDisplay < gDoorOff){
+            document.getElementById("gDoorImage").innerHTML = Image.src = "images/lock_on.png";
+        } else{
+            document.getElementById("gDoorImage").innerHTML = Image.src = "images/lock_off.png";
+        }
+    }
+
+    function compareKitchenFanTimes(){
+        if (kitFanOn < timeDisplay && timeDisplay < kitFanOff){
+            document.getElementById("kitFanImage").innerHTML = Image.src = "images/fan_on.png";
+        } else{
+            document.getElementById("kitFanImage").innerHTML = Image.src = "images/fan_off.png";
+        }
+    }
+
+    function compareDinLightTimes(){
+        if (dinLightOn < timeDisplay && timeDisplay < dinLightOff){
+            document.getElementById("dinLightImage").innerHTML = Image.src = "images/light_on.png";
+        } else{
+            document.getElementById("dinLightImage").innerHTML = Image.src = "images/light_off.png";
+        }
+    }
 
 </script>
 
-<button id="btnRun" onclick = "updateTime()">Run</button>
+<button id="btnRun" onclick = "updateTime();compareLivLampTimes();compareBedLamp1Times();compareBedLamp2Times();compareBathroomFanTimes();compareWasherTimes();compareDryerTimes();compareFrontDoorTimes();compareBackDoorTimes();compareGarageDoorTimes();compareKitchenFanTimes();compareDinLightTimes()" class = "button">Run</button>  <!--This is the button to retrieve the times-->
 <br></br>
-<label for="timeDisplay" >Current Time:</label>
+
+<label for="timeDisplay" ><h3>Current Time:</h3></label>
 <p id="timeDisplay">dis is da time</p>
 
-<p id="bigDisplay">dis is da big display</p>
 
-<script>
+<br></br><br></br>
 
+<!--Labels to show the images-->
+<label for="livLampTimeImage"><B>Living Room Lamp:</B></label>
+<img id="livLampTimeImage" src="images/light_off.png" height="50px"></img><br></br>
 
-</script>
+<label for="bedLamp1Image"><B>Bedroom #1 Desk Lamp:</B></label>
+<img id="bedLamp1Image" src="images/light_off.png" height="50px"></img><br></br>
 
+<label for="bedLamp2Image"><B>Bedroom #2 Floor Lamp:</B></label>
+<img id="bedLamp2Image" src="images/light_off.png" height="50px"></img><br></br>
 
+<label for="bathroomFanImage"><B>Bathroom Fan:</B></label>
+<img id="bathroomFanImage" src="images/fan_off.png" height="50px"></img><br></br>
 
+<label for="washerImage"><B>Washer:</B></label>
+<img id="washerImage" src="images/washer_off.png" height="50px"></img><br></br>
 
+<label for="dryerImage"><B>Dryer:</B></label>
+<img id="dryerImage" src="images/dryer_off.png" height="50px"></img><br></br>
 
+<label for="fDoorImage"><B>Front Door:</B></label>
+<img id="fDoorImage" src="images/lock_off.png" height="50px"></img><br></br>
+
+<label for="bDoorImage"><B>Back Door:</B></label>
+<img id="bDoorImage" src="images/lock_off.png" height="50px"></img><br></br>
+
+<label for="gDoorImage"><B>Garage Door:</B></label>
+<img id="gDoorImage" src="images/lock_off.png" height="50px"></img><br></br>
+
+<label for="kitFanImage"><B>Kitchen Fan:</B></label>
+<img id="kitFanImage" src="images/fan_off.png" height="50px"></img><br></br>
+
+<label for="dinLightImage"><B>Dining Room Light:</B></label>
+<img id="dinLightImage" src="images/light_off.png" height="50px"></img><br></br>
 
 
 </body>
