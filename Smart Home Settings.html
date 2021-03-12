@@ -13,6 +13,7 @@ body{
     font-family: sans-serif;
     margin: 0 auto;
 }
+
 .dropbtn {
   background-color: #fa9f38;
   color: white;
@@ -56,8 +57,9 @@ body{
 <body>
 
   
-    <script type="text/javascript">
-        function ShowHideLivLamp() {    
+    <script type="text/javascript"> //These are the toggles for showing and hiding time entry in the "Select Device" Dropdown
+
+        function ShowHideLivLamp() {
             var btnLivLamp = document.getElementById("btnLivLamp")
             var dvLivLampTimes = document.getElementById("dvLivLampTimes");
             if (dvLivLampTimes.style.display == "none"){
@@ -65,6 +67,8 @@ body{
             } else{
               dvLivLampTimes.style.display = "none";
             }
+
+
         }
 
         function ShowHideBed1Lamp() {    
@@ -167,15 +171,8 @@ body{
             }
         }
 
-        if (typeof(Storage) !== "undefined") {
-        localStorage.setItem("livLampTimeOn", 12);
-        } else {
-        document.getElementById("livLampTimeOn").innerHTML = "Sorry, your browser does not support Web Storage...";
-        }
-
-        //document.getElementById("livLampTimeOn")
+      
     </script>
-
 
 
 
@@ -201,7 +198,7 @@ body{
 
 <br></br><br></br><br></br><br></br><br></br><br></br>
 
-<div id="dvLivLampTimes" style="display:none">   
+<div id="dvLivLampTimes" style="display:none"> 
     <p><h3>Living Room Lamp</h3></p>
     <label for="livLampTimeOn">Turn on at:</label>
     <input type="time" id="livLampTimeOn">
@@ -311,6 +308,162 @@ body{
 
 </div><br></br>
 
+
+<script> //These are for sending the times entered by the user to localstorage
+
+  function SendTimes(){
+
+      // Living Room Lamp Retrievals
+          if (typeof(Storage) !== "undefined") {
+            localStorage.setItem("livLampTimeOn", ); document.getElementById("livLampTimeOn")
+          } else {
+            document.getElementById("livLampTimeOn").innerHTML = "Sorry, your browser does not support Web Storage...";
+          }
+
+          if (typeof(Storage) !== "undefined") {
+            localStorage.setItem("livLampTimeOff", ); document.getElementById("livLampTimeOff")
+          } else {
+            document.getElementById("livLampTimeOff").innerHTML = "Sorry, your browser does not support Web Storage...";
+          }
+
+      // Bedroom #1 Desk Lamp Retrievals
+          if (typeof(Storage) !== "undefined") {
+            localStorage.setItem("bedLamp1TimeOn", ); document.getElementById("bedLamp1TimeOn")
+          } else {
+            document.getElementById("bedLamp1TimeOn").innerHTML = "Sorry, your browser does not support Web Storage...";
+          }
+
+          if (typeof(Storage) !== "undefined") {
+            localStorage.setItem("bedLamp1TimeOff", ); document.getElementById("bedLamp1TimeOff")
+          } else {
+            document.getElementById("bedLamp1TimeOff").innerHTML = "Sorry, your browser does not support Web Storage...";
+          }
+
+      // Bedroom #2 Floor Lamp Retrievals
+      if (typeof(Storage) !== "undefined") {
+            localStorage.setItem("bedLamp2TimeOn", ); document.getElementById("bedLamp2TimeOn")
+          } else {
+            document.getElementById("bedLamp2TimeOn").innerHTML = "Sorry, your browser does not support Web Storage...";
+          }
+
+          if (typeof(Storage) !== "undefined") {
+            localStorage.setItem("bedLamp2TimeOff", ); document.getElementById("bedLamp2TimeOff")
+          } else {
+            document.getElementById("bedLamp2TimeOff").innerHTML = "Sorry, your browser does not support Web Storage...";
+          }
+
+      // Bathroom Fan Retrievals
+      if (typeof(Storage) !== "undefined") {
+            localStorage.setItem("bathFanTimeOn", ); document.getElementById("bathFanTimeOn")
+          } else {
+            document.getElementById("bathFanTimeOn").innerHTML = "Sorry, your browser does not support Web Storage...";
+          }
+
+          if (typeof(Storage) !== "undefined") {
+            localStorage.setItem("bathFanTimeOff", ); document.getElementById("bathFanTimeOff")
+          } else {
+            document.getElementById("bathFanTimeOff").innerHTML = "Sorry, your browser does not support Web Storage...";
+          }
+
+      // Washer Retrievals
+      if (typeof(Storage) !== "undefined") {
+            localStorage.setItem("washerOn", ); document.getElementById("washerOn")
+          } else {
+            document.getElementById("washerOn").innerHTML = "Sorry, your browser does not support Web Storage...";
+          }
+
+          if (typeof(Storage) !== "undefined") {
+            localStorage.setItem("washerOff", ); document.getElementById("washerOff")
+          } else {
+            document.getElementById("washerOff").innerHTML = "Sorry, your browser does not support Web Storage...";
+          }
+
+      // Dryer Retrievals
+      if (typeof(Storage) !== "undefined") {
+            localStorage.setItem("dryerOn", ); document.getElementById("dryerOn")
+          } else {
+            document.getElementById("dryerOn").innerHTML = "Sorry, your browser does not support Web Storage...";
+          }
+
+          if (typeof(Storage) !== "undefined") {
+            localStorage.setItem("dryerOff", ); document.getElementById("dryerOff")
+          } else {
+            document.getElementById("dryerOff").innerHTML = "Sorry, your browser does not support Web Storage...";
+          }
+
+      // Front Door Retrievals
+      if (typeof(Storage) !== "undefined") {
+            localStorage.setItem("fDoorOn", ); document.getElementById("fDoorOn")
+          } else {
+            document.getElementById("fDoorOn").innerHTML = "Sorry, your browser does not support Web Storage...";
+          }
+
+          if (typeof(Storage) !== "undefined") {
+            localStorage.setItem("fDoorOff", ); document.getElementById("fDoorOff")
+          } else {
+            document.getElementById("fDoorOff").innerHTML = "Sorry, your browser does not support Web Storage...";
+          }
+
+      // Back Door Retrievals
+      if (typeof(Storage) !== "undefined") {
+            localStorage.setItem("bDoorOn", ); document.getElementById("bDoorOn")
+          } else {
+            document.getElementById("bDoorOn").innerHTML = "Sorry, your browser does not support Web Storage...";
+          }
+
+          if (typeof(Storage) !== "undefined") {
+            localStorage.setItem("bDoorOff", ); document.getElementById("bDoorOff")
+          } else {
+            document.getElementById("bDoorOff").innerHTML = "Sorry, your browser does not support Web Storage...";
+          }
+
+      // Garage Door Retrievals
+      if (typeof(Storage) !== "undefined") {
+            localStorage.setItem("gDoorOn", ); document.getElementById("gDoorOn")
+          } else {
+            document.getElementById("gDoorOn").innerHTML = "Sorry, your browser does not support Web Storage...";
+          }
+
+          if (typeof(Storage) !== "undefined") {
+            localStorage.setItem("gDoorOff", ); document.getElementById("gDoorOff")
+          } else {
+            document.getElementById("gDoorOff").innerHTML = "Sorry, your browser does not support Web Storage...";
+          }
+
+       // Kitchen Fan Retrievals
+       if (typeof(Storage) !== "undefined") {
+            localStorage.setItem("kitFanOn", ); document.getElementById("kitFanOn")
+          } else {
+            document.getElementById("kitFanOn").innerHTML = "Sorry, your browser does not support Web Storage...";
+          }
+
+          if (typeof(Storage) !== "undefined") {
+            localStorage.setItem("kitFanOff", ); document.getElementById("kitFanOff")
+          } else {
+            document.getElementById("kitFanOff").innerHTML = "Sorry, your browser does not support Web Storage...";
+          }         
+
+       // Dining Room Light Retrievals
+       if (typeof(Storage) !== "undefined") {
+            localStorage.setItem("dinLightOn", ); document.getElementById("dinLightOn")
+          } else {
+            document.getElementById("dinLightOn").innerHTML = "Sorry, your browser does not support Web Storage...";
+          }
+
+          if (typeof(Storage) !== "undefined") {
+            localStorage.setItem("dinLightOff", ); document.getElementById("dinLightOff")
+          } else {
+            document.getElementById("dinLightOff").innerHTML = "Sorry, your browser does not support Web Storage...";
+          }   
+
+
+          }
+
+
+</script>
+
+
+<button id = "btnSendTimes" class = "dropbtn" onClick = "SendTimes()">Send Times</button> <!--Button to send times over to other page-->
 
 
 </body>
